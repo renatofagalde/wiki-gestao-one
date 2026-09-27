@@ -38,12 +38,13 @@ Conta → Convite → Time → Plano de comissão
 ## Os passos
 
 1. [Criar sua conta](01-criar-conta.md)
-2. [Sou usuário — esperar o convite](02-esperar-convite.md)
+2. [Sou usuário — aceitar o convite](02-esperar-convite.md)
 3. [Sou dono — convidar a equipe](03-convidar.md)
-4. [Criar um time e distribuir papéis](04-time.md)
-5. [O plano de comissionamento](05-plano.md)
-6. [Lead vira proposta (e nasce a apólice)](06-lead-proposta.md)
-7. [Confirmar e ver o dinheiro chegar](07-confirmar-resultado.md)
+4. [Atribuir perfil de acesso](04-perfil-acesso.md)
+5. [Criar um time e distribuir papéis](05-time.md)
+6. [O plano de comissionamento](06-plano.md)
+7. [Lead vira proposta (e nasce a apólice)](07-lead-proposta.md)
+8. [Confirmar e ver o dinheiro chegar](08-confirmar-resultado.md)
 
 Cada passo mostra **onde clicar**, **o que preencher** e **o resultado** — o que
 muda no sistema e quem passa a enxergar o quê.
