@@ -1,4 +1,4 @@
-# 5 · O plano de comissionamento
+# 6 · O plano de comissionamento
 
 O plano é **o coração da coisa** — é onde a regra da sua corretora vira software.
 
@@ -62,4 +62,4 @@ parcela em diante ninguém recebe.
     Todas as faixas com o selo verde de **100%** e o simulador batendo com o que
     você espera pagar.
 
-→ Próximo: [Lead vira proposta](06-lead-proposta.md)
+→ Próximo: [Lead vira proposta](07-lead-proposta.md)
