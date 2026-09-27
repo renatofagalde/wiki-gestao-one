@@ -1,6 +1,6 @@
-site_name: gestao.one — Docs técnicas
-site_description: Documentação técnica e de operação por módulo (app-cam, app-not, app-cms).
-site_url: https://renatofagalde.github.io/wiki/
+site_name: gestao.one — Guia de uso
+site_description: Guias de uso do gestao.one para dono de corretora, gerente, financeiro e vendedor.
+site_url: https://renatofagalde.github.io/wiki-gestao-one/
 
 theme:
   name: material
@@ -48,14 +48,3 @@ nav:
   - Uso do sistema:
       - Visão geral: uso-do-sistema/index.md
       - Cookbook — do zero à comissão paga: uso-do-sistema/cookbook.md
-  - AWS:
-      - Contas & switch role: aws/contas-e-switch-role.md
-  - app-cam:
-      - Visão geral: app-cam/index.md
-      - Logs & CloudWatch: app-cam/logs-cloudwatch.md
-      - Consultas SQL: app-cam/consultas-sql.md
-      - Casos resolvidos: app-cam/casos.md
-  - app-not:
-      - Visão geral: app-not/index.md
-  - app-cms:
-      - Visão geral: app-cms/index.md
