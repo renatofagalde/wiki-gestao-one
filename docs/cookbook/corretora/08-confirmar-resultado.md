@@ -1,4 +1,4 @@
-# 7 · Confirmar e ver o dinheiro chegar
+# 8 · Confirmar e ver o dinheiro chegar
 
 É aqui que tudo se fecha: a comissão sai de "pendente" e **cai na conta de cada
 pessoa** — e o vendedor vê isso na tela dele, ao vivo.
