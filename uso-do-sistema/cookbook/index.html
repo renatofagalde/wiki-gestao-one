@@ -1,0 +1,1495 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação técnica e de operação por módulo (app-cam, app-not, app-cms).">
+      
+      
+      
+        <link rel="canonical" href="https://renatofagalde.github.io/wiki/uso-do-sistema/cookbook/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../aws/contas-e-switch-role/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cookbook — do zero à comissão paga - gestao.one — Docs técnicas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cookbook-do-zero-a-comissao-paga" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="gestao.one — Docs técnicas" class="md-header__button md-logo" aria-label="gestao.one — Docs técnicas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            gestao.one — Docs técnicas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cookbook — do zero à comissão paga
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="gestao.one — Docs técnicas" class="md-nav__button md-logo" aria-label="gestao.one — Docs técnicas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    gestao.one — Docs técnicas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso do sistema
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso do sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookbook — do zero à comissão paga
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookbook — do zero à comissão paga
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-elenco-do-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O elenco do exemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordem-de-montagem-e-por-que-essa-ordem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de montagem (e por que essa ordem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/contas-e-switch-role/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contas & switch role
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    app-cam
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    app-cam
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-cam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-cam/logs-cloudwatch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logs & CloudWatch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-cam/consultas-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consultas SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-cam/casos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos resolvidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    app-not
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    app-not
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-not/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    app-cms
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    app-cms
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../app-cms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-elenco-do-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O elenco do exemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordem-de-montagem-e-por-que-essa-ordem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de montagem (e por que essa ordem)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cookbook-do-zero-a-comissao-paga">Cookbook — do zero à comissão paga<a class="headerlink" href="#cookbook-do-zero-a-comissao-paga" title="Permanent link">&para;</a></h1>
+<p>Tutorial guiado do fluxo completo do gestao.one, montando uma corretora de
+exemplo do zero até o dinheiro aparecer na conta de cada pessoa.</p>
+<p>Use este doc de duas formas: como <strong>treinamento</strong> (siga na ordem, é um roteiro
+executável em DEV) e como <strong>roteiro de demo</strong> para dono de corretora (o resumo
+de 15 minutos está no fim).</p>
+<hr />
+<h2 id="o-elenco-do-exemplo">O elenco do exemplo<a class="headerlink" href="#o-elenco-do-exemplo" title="Permanent link">&para;</a></h2>
+<p>Uma corretora com quatro pessoas:</p>
+<table>
+<thead>
+<tr>
+<th>Pessoa</th>
+<th>Faz o quê</th>
+<th>Perfil de acesso</th>
+<th>Papel no time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Renato</td>
+<td>dono</td>
+<td><code>admin</code></td>
+<td><code>director</code> (diretor)</td>
+</tr>
+<tr>
+<td>Marina</td>
+<td>gerente comercial</td>
+<td><code>gerente</code></td>
+<td><code>manager</code> (gerente)</td>
+</tr>
+<tr>
+<td>Bruno</td>
+<td>vendedor</td>
+<td><code>vendedor</code></td>
+<td><code>seller</code></td>
+</tr>
+<tr>
+<td>Carla</td>
+<td>vendedora</td>
+<td><code>vendedor</code></td>
+<td><code>seller</code></td>
+</tr>
+</tbody>
+</table>
+<p>E o plano de comissão que queremos:</p>
+<table>
+<thead>
+<tr>
+<th>Faixa</th>
+<th>Rateio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parcela 1</td>
+<td>100% para os vendedores</td>
+</tr>
+<tr>
+<td>Parcela 2</td>
+<td>50% vendedores · 25% dono · 25% gerente</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Atenção ao conceito central:</strong> existem <strong>dois</strong> conjuntos de papéis no
+sistema, e eles não se misturam.</p>
+<ul>
+<li><strong>Perfil de acesso</strong> (<code>admin</code>, <code>gerente</code>, <code>vendedor</code>) = <strong>o que a pessoa
+  pode ver e fazer</strong> nas telas. Vem do módulo de acesso.</li>
+<li><strong>Papel de time</strong> (<code>director</code>, <code>manager</code>, <code>seller</code>) = <strong>quanto a pessoa
+  ganha</strong> no rateio da comissão.</li>
+</ul>
+<p>Marina pode ser <code>gerente</code> no acesso e <code>seller</code> no time — são decisões
+independentes. Confundir os dois é o erro nº 1 de quem está montando o
+primeiro plano.</p>
+</blockquote>
+<hr />
+<h2 id="ordem-de-montagem-e-por-que-essa-ordem">Ordem de montagem (e por que essa ordem)<a class="headerlink" href="#ordem-de-montagem-e-por-que-essa-ordem" title="Permanent link">&para;</a></h2>
+<p>O sistema tem dependências duras: cada etapa só existe porque a anterior
+existe. Montar fora de ordem trava.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Usuários  →  Times  →  Catálogo  →  Plano de comissão
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                          ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   Pessoa (cliente)  →  Lead  →  Proposta  →  APÓLICE
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                          ↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                          Comissões pendentes → confirmar
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                                          ↓
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                     Recebíveis + Conta corrente (o dinheiro)
+</code></pre></div>
+<p>Campanha é o único bloco que corre em paralelo — não bloqueia nada.</p>
+<hr />
+<h1 id="parte-1-montar-a-estrutura-uma-vez-so">Parte 1 — Montar a estrutura (uma vez só)<a class="headerlink" href="#parte-1-montar-a-estrutura-uma-vez-so" title="Permanent link">&para;</a></h1>
+<h2 id="passo-1-colocar-as-pessoas-dentro-da-corretora">Passo 1 · Colocar as pessoas dentro da corretora<a class="headerlink" href="#passo-1-colocar-as-pessoas-dentro-da-corretora" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> menu → membros da empresa / convites.</p>
+<p>O time precisa existir como <strong>usuário da corretora</strong> antes de qualquer coisa.
+Convide Marina, Bruno e Carla. Cada um recebe um convite, cria a senha e entra.</p>
+<p>Duas regras que confundem:</p>
+<ul>
+<li><strong>Criar conta ≠ ter corretora.</strong> Quem se cadastra sozinho no gestao.one fica
+  sem corretora até ser convidado. É esperado.</li>
+<li>O perfil de acesso (<code>vendedor</code>, <code>gerente</code>) define o menu que a pessoa vê.
+  Bruno logado <strong>não enxerga</strong> as telas de plano e de conta corrente da
+  corretora — e é assim que tem que ser.</li>
+</ul>
+<blockquote>
+<p><strong>Convite não aparece para a pessoa?</strong> Quase sempre é e-mail digitado errado:
+convidar um e-mail sem conta <strong>não dá erro na tela</strong> (é anti-enumeração).
+Confira a grafia — inclusive pontos, que o Gmail ignora mas o sistema não.</p>
+</blockquote>
+<p>✅ <strong>Checkpoint:</strong> as 4 pessoas aparecem em Membros da empresa.</p>
+<h2 id="passo-2-criar-o-time-e-distribuir-os-papeis">Passo 2 · Criar o time e distribuir os papéis<a class="headerlink" href="#passo-2-criar-o-time-e-distribuir-os-papeis" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Times</strong>.</p>
+<p>Crie um time — ex.: <code>TIME SENNA</code>. Abra o time e adicione os quatro membros,
+cada um com seu papel:</p>
+<table>
+<thead>
+<tr>
+<th>Membro</th>
+<th>Papel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Renato</td>
+<td><code>director</code></td>
+</tr>
+<tr>
+<td>Marina</td>
+<td><code>manager</code></td>
+</tr>
+<tr>
+<td>Bruno</td>
+<td><code>seller</code></td>
+</tr>
+<tr>
+<td>Carla</td>
+<td><code>seller</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Por que o dono e o gerente entram no time?</strong> Porque o plano só sabe pagar
+três tipos de destinatário:</p>
+<table>
+<thead>
+<tr>
+<th>Destinatário</th>
+<th>Quem recebe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vendedor</strong></td>
+<td>o vendedor <strong>daquela venda específica</strong> (quem fechou)</td>
+</tr>
+<tr>
+<td><strong>Corretora (casa)</strong></td>
+<td>fica com a empresa, não com pessoa nenhuma</td>
+</tr>
+<tr>
+<td><strong>Papel de time</strong></td>
+<td>todo mundo que tem aquele papel no time escolhido</td>
+</tr>
+</tbody>
+</table>
+<p>Não existe "pagar direto para o Renato". Para pagar uma pessoa específica, ela
+precisa ter um <strong>papel que só ela tem</strong> no time. Foi exatamente a sua intuição:
+<em>"grupos de um usuário"</em>. O papel <code>director</code> é o grupo-de-um do dono; <code>manager</code>,
+o da gerente.</p>
+<p>⚠️ <strong>A pegadinha silenciosa:</strong> se o plano tem uma linha para o papel <code>director</code>
+e ninguém no time tem esse papel, aquele pedaço da comissão <strong>distribui zero,
+sem erro nenhum</strong>. A tela avisa, mas só se os membros já estiverem cadastrados.
+Monte o time <strong>antes</strong> do plano.</p>
+<p>✅ <strong>Checkpoint:</strong> o time mostra 4 membros, com os 4 papéis preenchidos.</p>
+<h2 id="passo-3-catalogo-de-operadoras-e-produtos">Passo 3 · Catálogo de operadoras e produtos<a class="headerlink" href="#passo-3-catalogo-de-operadoras-e-produtos" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Operadoras</strong>.</p>
+<p>Cadastre a operadora (ex.: <code>PORTO SEGURO</code>) e seus produtos (ex.: <code>AUTO</code>,
+<code>RESIDENCIAL</code>).</p>
+<p>Parece burocracia, mas é o que faz o gráfico "Onde estão as vendas" funcionar:
+sem catálogo, o produto é texto livre digitado na venda — e <code>PORTO SEGURO AUTO</code>,
+<code>Porto auto</code> e <code>porto seguro auto</code> viram três produtos diferentes no relatório.
+O catálogo é o que mantém o ranking honesto.</p>
+<h2 id="passo-4-o-plano-de-comissao-o-coracao-da-coisa">Passo 4 · O plano de comissão — o coração da coisa<a class="headerlink" href="#passo-4-o-plano-de-comissao-o-coracao-da-coisa" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Planos</strong> → Novo plano.</p>
+<p>Crie o plano: nome (<code>PLANO AUTO PADRÃO</code>), o produto do catálogo e o
+<strong>desconto de imposto</strong> (ex.: 10%). Esse imposto sai do valor bruto <strong>antes</strong> de
+qualquer divisão — é por isso que o líquido é menor que o bruto.</p>
+<p>Abra o plano. Um plano é uma lista de <strong>faixas de parcela</strong>, e cada faixa tem
+suas <strong>linhas de rateio</strong> que precisam somar exatamente 100%.</p>
+<h3 id="montando-o-nosso-exemplo">Montando o nosso exemplo<a class="headerlink" href="#montando-o-nosso-exemplo" title="Permanent link">&para;</a></h3>
+<p><strong>Faixa 1 — da parcela 1 até a 1:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Linha</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Papel de time → <code>TIME SENNA</code> / <code>seller</code></td>
+<td>100</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>100 ✅</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Faixa 2 — da parcela 2 até a 2:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Linha</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Papel de time → <code>TIME SENNA</code> / <code>seller</code></td>
+<td>50</td>
+</tr>
+<tr>
+<td>Papel de time → <code>TIME SENNA</code> / <code>director</code></td>
+<td>25</td>
+</tr>
+<tr>
+<td>Papel de time → <code>TIME SENNA</code> / <code>manager</code></td>
+<td>25</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>100 ✅</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Faixa 3 — da parcela 3 em diante (vitalício):</strong> marque a opção de vitalício
+em vez de informar a parcela final. Sem essa faixa, da 3ª parcela em diante
+ninguém recebe nada.</p>
+<h3 id="duas-decisoes-que-valem-parar-para-pensar">Duas decisões que valem parar para pensar<a class="headerlink" href="#duas-decisoes-que-valem-parar-para-pensar" title="Permanent link">&para;</a></h3>
+<p><strong>1. <code>seller</code> (papel de time) ou "Vendedor" (destinatário)?</strong> São coisas
+diferentes e a escolha muda o negócio:</p>
+<ul>
+<li><strong>"Vendedor"</strong> = quem fechou a venda leva tudo. Comissão individual, incentiva
+  a competição.</li>
+<li><strong>Papel <code>seller</code> do time</strong> = divide entre todos os vendedores do time. Comissão
+  coletiva, incentiva a cooperação.</li>
+</ul>
+<p>Você pediu <em>"100% para o time de vendedores"</em> — então é o papel de time. Se a
+ideia for premiar quem vendeu, troque por "Vendedor". É uma escolha de política
+comercial, não técnica.</p>
+<p><strong>2. Use o simulador antes de sair vendendo.</strong> No fim da tela do plano, informe
+um prêmio de exemplo (ex.: R$ 1.200,00) e veja em reais quanto cada linha rende.
+É o momento de descobrir que a conta não fecha como você imaginava — antes de
+uma apólice real depender dela.</p>
+<p>⚠️ <strong>Plano é quase imutável.</strong> Não dá para editar uma linha nem apagar uma linha
+isolada: remove-se a <strong>faixa inteira</strong> e monta de novo. E se o plano já tiver
+apólice emitida, a remoção é <strong>bloqueada</strong> — mexer no rateio mudaria comissões
+que já estão pendentes. Para mudar a regra depois disso, crie um plano novo para
+as próximas vendas.</p>
+<p>✅ <strong>Checkpoint:</strong> todas as faixas com o selo verde de 100% e o simulador
+batendo com o que você espera pagar.</p>
+<h2 id="passo-5-campanha-opcional-roda-em-paralelo">Passo 5 · Campanha (opcional, roda em paralelo)<a class="headerlink" href="#passo-5-campanha-opcional-roda-em-paralelo" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Campanhas</strong>.</p>
+<p>Campanha é <strong>incentivo por meta</strong>, não faz parte do rateio: "quem vender 10
+apólices de auto entre 01/09 e 31/10 ganha R$ 500". Você define produto,
+período, meta (quantidade) e bônus (valor fixo ou percentual).</p>
+<p>O acompanhamento é automático — conforme as apólices são emitidas, o sistema
+gera as metas por vendedor. Você só acompanha o progresso.</p>
+<p>⚠️ Campanha <strong>não pode ser editada nem excluída</strong>. Confira as datas antes de
+salvar.</p>
+<hr />
+<h1 id="parte-2-fazer-uma-venda-acontecer">Parte 2 — Fazer uma venda acontecer<a class="headerlink" href="#parte-2-fazer-uma-venda-acontecer" title="Permanent link">&para;</a></h1>
+<h2 id="passo-6-cadastrar-o-cliente-pessoas">Passo 6 · Cadastrar o cliente (Pessoas)<a class="headerlink" href="#passo-6-cadastrar-o-cliente-pessoas" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> menu → <strong>Clientes</strong>.</p>
+<p>Tudo começa numa pessoa. Cadastre o cliente com nome e CPF/CNPJ (o dígito
+verificador é validado — documento inválido não passa).</p>
+<p><strong>A busca por aproximação</strong> é o detalhe que os corretores mais gostam: digite
+<strong>pelo menos 3 letras</strong> e ela encontra por semelhança, não por igualdade. Buscar
+<code>joao silva</code> acha <code>JOÃO DA SILVA SANTOS</code>; erro de digitação e acento não
+atrapalham. Também funciona por documento.</p>
+<p>Na ficha da pessoa você ainda tem: <strong>documentos</strong> (anexos), <strong>interações</strong>
+(histórico de contato) e <strong>vínculos</strong> (relação entre pessoas — cônjuge,
+dependente, empresa/sócio).</p>
+<blockquote>
+<p>Excluir uma pessoa apenas <strong>desativa</strong>: some das listas, nada é perdido.</p>
+</blockquote>
+<h2 id="passo-7-lead-a-oportunidade">Passo 7 · Lead — a oportunidade<a class="headerlink" href="#passo-7-lead-a-oportunidade" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Leads</strong>.</p>
+<p>O lead liga <strong>uma pessoa</strong> a <strong>um produto</strong>, com o vendedor responsável. É onde
+a oportunidade vive enquanto está em negociação — anote as conversas no campo de
+notas.</p>
+<p>No nosso exemplo: lead do cliente com o Bruno como vendedor.</p>
+<p>Quando o cliente decide fechar, clique em <strong>Converter</strong>. Isso libera o lead para
+virar proposta. É irreversível — mas só marca o lead, não cria nada ainda.</p>
+<blockquote>
+<p>A pessoa precisa existir antes. O lead não cadastra cliente.</p>
+</blockquote>
+<h2 id="passo-8-proposta-e-o-nascimento-da-apolice">Passo 8 · Proposta — e o nascimento da apólice<a class="headerlink" href="#passo-8-proposta-e-o-nascimento-da-apolice" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Propostas</strong>.</p>
+<p>Crie a proposta escolhendo:</p>
+<ul>
+<li>o <strong>lead convertido</strong>;</li>
+<li>o <strong>plano de comissão</strong> (aqui é onde a regra do Passo 4 entra na venda);</li>
+<li>o <strong>prêmio</strong> e o <strong>número de parcelas</strong> (ex.: R$ 1.200,00 em 12x).</li>
+</ul>
+<p>Ciclo de vida:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rascunho ──Enviar──&gt; enviada ──Aceitar──&gt; APÓLICE ATIVA
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    └────────── Cancelar ──────────┘
+</code></pre></div>
+<p><strong>"Aceitar" é o momento mágico.</strong> Nesse clique o sistema:</p>
+<ol>
+<li>gera a <strong>apólice</strong>;</li>
+<li>gera as <strong>12 parcelas de comissão</strong>, cada uma com bruto, imposto e líquido;</li>
+<li>congela o plano de comissão naquela apólice.</li>
+</ol>
+<p>⚠️ <strong>Aceitar não tem volta.</strong> Confira prêmio, parcelas e plano antes.</p>
+<p>✅ <strong>Checkpoint:</strong> a apólice aparece e as parcelas estão listadas como pendentes.</p>
+<hr />
+<h1 id="parte-3-o-dinheiro">Parte 3 — O dinheiro<a class="headerlink" href="#parte-3-o-dinheiro" title="Permanent link">&para;</a></h1>
+<h2 id="passo-9-dar-baixa-nas-comissoes">Passo 9 · Dar baixa nas comissões<a class="headerlink" href="#passo-9-dar-baixa-nas-comissoes" title="Permanent link">&para;</a></h2>
+<p><strong>Onde:</strong> Comissões → <strong>Pendentes</strong> (visão da gestão/financeiro).</p>
+<p>Cada linha é uma parcela: <strong>bruto − imposto = líquido</strong>. Enquanto está
+<code>pendente</code>, ninguém recebeu nada — o valor existe, mas não foi distribuído.</p>
+<p><strong>Confirmar</strong> uma parcela = a operadora pagou aquela parcela → o sistema roda o
+rateio do plano e credita cada beneficiário.</p>
+<p>Confirmando a <strong>parcela 1</strong> da nossa apólice (100% para o papel <code>seller</code>), o
+valor líquido vai para os vendedores do time. Confirmando a <strong>parcela 2</strong>, o
+mesmo líquido se divide 50/25/25 entre vendedores, Renato e Marina.</p>
+<p>Dá para selecionar várias e usar <strong>Confirmar selecionadas</strong> — vão uma a uma e
+sai um relatório no fim. O lote <strong>não é tudo-ou-nada</strong>: parcela já confirmada
+volta marcada como tal e o resto segue normalmente.</p>
+<p>⚠️ <strong>Não existe estorno pela interface.</strong> Confirmar em lote sem conferir é o
+jeito mais rápido de criar dor de cabeça. E a tela de confirmação <strong>não mostra a
+divisão</strong> — o rateio aparece só em Recebíveis.</p>
+<h2 id="passo-10-ver-o-rateio-chegar-o-teste-dos-dois-navegadores">Passo 10 · Ver o rateio chegar (o teste dos dois navegadores)<a class="headerlink" href="#passo-10-ver-o-rateio-chegar-o-teste-dos-dois-navegadores" title="Permanent link">&para;</a></h2>
+<p>Este é o passo que fecha o entendimento. Faça exatamente assim:</p>
+<p><strong>Navegador 1 — você (dono/admin), em Comissões → Recebíveis:</strong>
+vê o <strong>total da corretora por beneficiário</strong>. Quanto ficou na casa, quanto foi
+para cada pessoa, o que já entrou e o que ainda está por vir.</p>
+<p><strong>Navegador 2 (janela anônima) — logado como o Bruno, mesma tela:</strong>
+Bruno vê <strong>só o dele</strong>. Total recebido, total a receber, e apólice por apólice
+quanto ele ganha em cada parcela — com o percentual e a origem (veio como
+vendedor da venda? como papel de time?).</p>
+<p>Confirme mais uma parcela no navegador 1 e recarregue o navegador 2: o valor do
+Bruno sobe. É a demonstração mais convincente do produto inteiro.</p>
+<blockquote>
+<p>Se o valor de uma parcela para outra muda, está certo: é o plano aplicando
+percentuais diferentes por faixa.</p>
+</blockquote>
+<h2 id="passo-11-conta-corrente">Passo 11 · Conta corrente<a class="headerlink" href="#passo-11-conta-corrente" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Saldo e movimentos</strong> (gestão): o saldo da corretora e <strong>todos</strong> os
+  movimentos, de todos os beneficiários. Vermelho é saída.</li>
+<li><strong>Meu extrato</strong> (todo mundo): os lançamentos da própria pessoa. É onde o
+  vendedor confere o que recebeu.</li>
+</ul>
+<p>Enquanto Recebíveis mostra o <strong>direito</strong> (quanto a apólice te rende), a conta
+corrente mostra o <strong>caixa</strong> (o que entrou e saiu de fato).</p>
+<blockquote>
+<p>Corretora recém-criada pode mostrar "em provisionamento" — a conta é criada
+automaticamente logo depois do cadastro. Atualize em alguns instantes.</p>
+</blockquote>
+<hr />
+<h1 id="parte-4-a-home-para-apresentar-ao-dono">Parte 4 — A home, para apresentar ao dono<a class="headerlink" href="#parte-4-a-home-para-apresentar-ao-dono" title="Permanent link">&para;</a></h1>
+<p>A visão geral se monta <strong>pelo que cada usuário pode ver</strong>: quem não tem
+permissão num bloco simplesmente não recebe aquele bloco. O dono vê tudo; o
+vendedor vê essencialmente "Seus recebíveis".</p>
+<table>
+<thead>
+<tr>
+<th>Bloco</th>
+<th>Mostra</th>
+<th>Responde a pergunta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dinheiro da corretora</strong></td>
+<td>Já entrou · A receber · Ficou na casa · Pago à equipe</td>
+<td>"Quanto a corretora ganhou e quanto sobrou pra mim depois de pagar o time?"</td>
+</tr>
+<tr>
+<td><strong>Por unidade</strong></td>
+<td>Recebido e a receber por filial</td>
+<td>"Qual unidade está performando?"</td>
+</tr>
+<tr>
+<td><strong>Comercial</strong></td>
+<td>Leads novos, propostas em aberto, fechadas, prêmio fechado, ticket médio e a curva dos <strong>últimos 6 meses</strong></td>
+<td>"Estou vendendo mais ou menos que no mês passado?"</td>
+</tr>
+<tr>
+<td><strong>Onde estão as vendas</strong></td>
+<td>Ranking por <strong>operadora</strong> e por <strong>produto</strong></td>
+<td>"Meu negócio depende de qual operadora? Que produto fecha mais?"</td>
+</tr>
+<tr>
+<td><strong>A confirmar</strong></td>
+<td>Fila do financeiro: quantas parcelas, bruto, imposto, líquido</td>
+<td>"Quanto tem parado esperando baixa?"</td>
+</tr>
+<tr>
+<td><strong>Seus recebíveis</strong></td>
+<td>Extrato pessoal + maiores apólices</td>
+<td>"Quanto eu, pessoalmente, vou receber?"</td>
+</tr>
+<tr>
+<td><strong>Estrutura</strong></td>
+<td>Contagem de planos, times, campanhas ativas e clientes</td>
+<td>"A operação está configurada?"</td>
+</tr>
+</tbody>
+</table>
+<p>O argumento de venda para o dono está no bloco <strong>Dinheiro da corretora</strong>: a
+separação <strong>casa × equipe</strong>. É a resposta que ele normalmente só tem depois de
+uma tarde de planilha.</p>
+<hr />
+<h1 id="roteiro-de-demo-15-minutos">Roteiro de demo — 15 minutos<a class="headerlink" href="#roteiro-de-demo-15-minutos" title="Permanent link">&para;</a></h1>
+<p>Com a estrutura já montada (Passos 1 a 5 feitos antes):</p>
+<ol>
+<li><strong>Home</strong> (2 min) — comece pelo dinheiro: casa × equipe, curva de 6 meses,
+   ranking por operadora.</li>
+<li><strong>Plano de comissão</strong> (3 min) — abra o plano e mostre o <strong>simulador</strong>. "A
+   regra da sua corretora vira isso aqui, e você vê em reais antes de vender."</li>
+<li><strong>Cliente → Lead → Proposta</strong> (4 min) — mostre a busca por aproximação, crie o
+   lead, converta, crie a proposta e <strong>aceite</strong>. Aponte as 12 parcelas nascendo.</li>
+<li><strong>Confirmar a parcela 1</strong> (2 min) — bruto, imposto, líquido.</li>
+<li><strong>Os dois navegadores</strong> (3 min) — o dono vê o total da corretora; o vendedor
+   vê só o dele, e o valor sobe na frente do cliente. <strong>Este é o clímax.</strong></li>
+<li><strong>Campanha</strong> (1 min) — o incentivo por meta, rodando sozinho.</li>
+</ol>
+<hr />
+<h1 id="colinha-de-pegadinhas">Colinha de pegadinhas<a class="headerlink" href="#colinha-de-pegadinhas" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>O que está acontecendo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convite não aparece para a pessoa</td>
+<td>E-mail digitado errado — convidar e-mail sem conta não dá erro. Confira a grafia.</td>
+</tr>
+<tr>
+<td>Faixa do plano não salva</td>
+<td>As linhas não somam 100%.</td>
+</tr>
+<tr>
+<td>Linha de papel de time paga zero</td>
+<td>Nenhum membro do time tem aquele papel. Ajuste em Times.</td>
+</tr>
+<tr>
+<td>Não consigo remover a faixa</td>
+<td>O plano já tem apólice emitida. Crie um plano novo.</td>
+</tr>
+<tr>
+<td>Nenhum lead para escolher na proposta</td>
+<td>O lead existe mas não foi <strong>convertido</strong>.</td>
+</tr>
+<tr>
+<td>Não acho a pessoa na busca</td>
+<td>Menos de 3 letras — ou ela não foi cadastrada ainda.</td>
+</tr>
+<tr>
+<td>Erro de documento duplicado</td>
+<td>Já existe pessoa com esse CPF/CNPJ nesta corretora.</td>
+</tr>
+<tr>
+<td>Confirmei a comissão e não vi a divisão</td>
+<td>A divisão aparece em <strong>Recebíveis</strong>, não na confirmação.</td>
+</tr>
+<tr>
+<td>Vendedor diz que a tela "não existe"</td>
+<td>O perfil de acesso dele não tem aquele item. É controle de acesso, não bug.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sem volta:</strong> converter lead · aceitar proposta · confirmar comissão · criar
+campanha. Confira antes de clicar.</p>
+<hr />
+<h2 id="para-ir-mais-fundo">Para ir mais fundo<a class="headerlink" href="#para-ir-mais-fundo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cada tela tem <strong>ajuda contextual</strong> com passos e perguntas frequentes — é a
+  mesma linguagem deste doc, no momento do uso.</li>
+<li>Detalhe técnico (logs, SQL, contratos por módulo) está na parte técnica desta
+  wiki — ex.: a seção <a href="../../app-cam/">app-cam</a>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.instant", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
