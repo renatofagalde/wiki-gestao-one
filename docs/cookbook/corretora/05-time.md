@@ -1,4 +1,4 @@
-# 4 · Criar um time e distribuir papéis
+# 5 · Criar um time e distribuir papéis
 
 **Onde:** Comissões → **Times**.
 
@@ -37,4 +37,4 @@ do dono; o `manager`, o da gerente.
 !!! success "Checkpoint"
     O time mostra os 4 membros, com os 4 papéis preenchidos.
 
-→ Próximo: [O plano de comissionamento](05-plano.md)
+→ Próximo: [O plano de comissionamento](06-plano.md)
