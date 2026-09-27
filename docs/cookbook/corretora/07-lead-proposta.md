@@ -1,4 +1,4 @@
-# 6 · Lead vira proposta (e nasce a apólice)
+# 7 · Lead vira proposta (e nasce a apólice)
 
 !!! note "🖼️ Ilustração em construção"
     Os mockups de **Clientes**, **Leads** e **Propostas** entram em breve.
@@ -47,4 +47,4 @@ rascunho ──Enviar──> enviada ──Aceitar──> APÓLICE ATIVA
 !!! success "Checkpoint"
     A apólice aparece e as parcelas estão listadas como **pendentes**.
 
-→ Próximo: [Confirmar e ver o dinheiro chegar](07-confirmar-resultado.md)
+→ Próximo: [Confirmar e ver o dinheiro chegar](08-confirmar-resultado.md)
