@@ -55,11 +55,12 @@ nav:
       - Corretora:
           - Visão geral: cookbook/corretora/index.md
           - 1 · Criar sua conta: cookbook/corretora/01-criar-conta.md
-          - 2 · Esperar o convite: cookbook/corretora/02-esperar-convite.md
+          - 2 · Aceitar o convite: cookbook/corretora/02-esperar-convite.md
           - 3 · Convidar a equipe: cookbook/corretora/03-convidar.md
-          - 4 · Criar um time: cookbook/corretora/04-time.md
-          - 5 · Plano de comissionamento: cookbook/corretora/05-plano.md
-          - 6 · Lead vira proposta: cookbook/corretora/06-lead-proposta.md
-          - 7 · Confirmar e ver o resultado: cookbook/corretora/07-confirmar-resultado.md
+          - 4 · Atribuir perfil de acesso: cookbook/corretora/04-perfil-acesso.md
+          - 5 · Criar um time: cookbook/corretora/05-time.md
+          - 6 · Plano de comissionamento: cookbook/corretora/06-plano.md
+          - 7 · Lead vira proposta: cookbook/corretora/07-lead-proposta.md
+          - 8 · Confirmar e ver o resultado: cookbook/corretora/08-confirmar-resultado.md
       - WebFlow: cookbook/webflow.md
       - TISS: cookbook/tiss.md
