@@ -391,5 +391,5 @@ campanha. Confira antes de clicar.
 
 - Cada tela tem **ajuda contextual** com passos e perguntas frequentes — é a
   mesma linguagem deste doc, no momento do uso.
-- Detalhe técnico (logs, SQL, contratos por módulo) está na parte técnica desta
-  wiki — ex.: a seção [app-cam](../app-cam/index.md).
+- Detalhe técnico (logs, SQL, contratos por módulo, AWS) fica numa wiki separada e
+  **privada** — a `wiki-gestao-one-tecnica`.
