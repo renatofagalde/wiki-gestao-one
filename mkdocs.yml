@@ -28,6 +28,8 @@ theme:
 
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight:
@@ -35,6 +37,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - tables
   - toc:
       permalink: true
@@ -45,7 +50,16 @@ plugins:
 
 nav:
   - Início: index.md
-  - Uso do sistema:
-      - Visão geral: uso-do-sistema/index.md
-      - Cookbook — do zero à comissão paga: uso-do-sistema/cookbook.md
-      - "Passo 1 (visual): convidar": uso-do-sistema/passo1-convidar.md
+  - Cookbook:
+      - Visão geral: cookbook/index.md
+      - Corretora:
+          - Visão geral: cookbook/corretora/index.md
+          - 1 · Criar sua conta: cookbook/corretora/01-criar-conta.md
+          - 2 · Esperar o convite: cookbook/corretora/02-esperar-convite.md
+          - 3 · Convidar a equipe: cookbook/corretora/03-convidar.md
+          - 4 · Criar um time: cookbook/corretora/04-time.md
+          - 5 · Plano de comissionamento: cookbook/corretora/05-plano.md
+          - 6 · Lead vira proposta: cookbook/corretora/06-lead-proposta.md
+          - 7 · Confirmar e ver o resultado: cookbook/corretora/07-confirmar-resultado.md
+      - WebFlow: cookbook/webflow.md
+      - TISS: cookbook/tiss.md
