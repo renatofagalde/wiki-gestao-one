@@ -1,13 +1,12 @@
-# gestao.one — Docs técnicas
+# gestao.one — Guia de uso
 
-Documentação técnica e de operação do gestao.one, **organizada por módulo**
-(`app-cam`, `app-not`, `app-cms`, …). Publicada com [MkDocs Material] e servida
-por GitHub Pages.
+Guias de **uso** do gestao.one (dono de corretora, gerente, financeiro,
+vendedor). Publicado com [MkDocs Material] e servido por GitHub Pages.
 
-> ⚠️ **Repositório público.** Nunca inclua dado real: e-mail de pessoa, `user_id`,
-> `hash` de corretora, IP, token ou credencial. Use sempre placeholders
-> (`pessoa.exemplo@gmail.com`, `01a0e300-0000-…`). Comandos e queries, sim; dados
-> de produção/cliente, não.
+🌐 **Site:** <https://renatofagalde.github.io/wiki-gestao-one/>
+
+> A documentação **técnica** (logs, SQL, contratos por módulo, AWS) fica em outro
+> repositório, **privado**: `wiki-gestao-one-tecnica`.
 
 ## Rodar localmente
 
@@ -20,20 +19,16 @@ mkdocs serve            # http://127.0.0.1:8000
 ## Publicar
 
 O push na `main` dispara o workflow (`.github/workflows/deploy.yml`), que roda
-`mkdocs gh-deploy` e publica na branch `gh-pages`. O site fica em
-<https://renatofagalde.github.io/wiki/>.
+`mkdocs gh-deploy` e publica na branch `gh-pages`.
 
 ## Estrutura
 
 ```
 docs/
-  index.md            # porta de entrada
-  app-cam/            # autenticação, contas, convites, RBAC
-  app-not/            # notificações / e-mail
-  app-cms/            # conteúdo
+  index.md                 # porta de entrada
+  uso-do-sistema/
+    index.md
+    cookbook.md            # do zero à comissão paga
 ```
-
-Cada módulo segue o mesmo padrão: visão geral, logs & CloudWatch, consultas SQL,
-casos resolvidos.
 
 [MkDocs Material]: https://squidfunk.github.io/mkdocs-material/
