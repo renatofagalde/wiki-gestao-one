@@ -45,6 +45,9 @@ plugins:
 
 nav:
   - Início: index.md
+  - Uso do sistema:
+      - Visão geral: uso-do-sistema/index.md
+      - Cookbook — do zero à comissão paga: uso-do-sistema/cookbook.md
   - AWS:
       - Contas & switch role: aws/contas-e-switch-role.md
   - app-cam:
