@@ -1,43 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://renatofagalde.github.io/wiki/</loc>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/</loc>
          <lastmod>2026-09-27</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki/app-cam/</loc>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/uso-do-sistema/</loc>
          <lastmod>2026-09-27</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki/app-cam/casos/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/app-cam/consultas-sql/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/app-cam/logs-cloudwatch/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/app-cms/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/app-not/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/aws/contas-e-switch-role/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/uso-do-sistema/</loc>
-         <lastmod>2026-09-27</lastmod>
-    </url>
-    <url>
-         <loc>https://renatofagalde.github.io/wiki/uso-do-sistema/cookbook/</loc>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/uso-do-sistema/cookbook/</loc>
          <lastmod>2026-09-27</lastmod>
     </url>
 </urlset>
