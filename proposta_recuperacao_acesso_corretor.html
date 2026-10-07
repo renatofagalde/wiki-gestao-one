@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta de solução — Recuperação automática de acesso</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:#222;max-width:980px;margin:40px auto;padding:0 28px;background:#fff}
+h1{font-size:30px;margin-bottom:28px}h2{font-size:22px;margin-top:34px;border-bottom:1px solid #ddd;padding-bottom:7px}
+p{margin:12px 0}ul,ol{margin-top:8px}code{font-family:Consolas,"Courier New",monospace;background:#f3f4f6;padding:2px 5px;border-radius:4px}
+pre,.diagram{background:#f6f8fa;border:1px solid #e1e4e8;border-radius:7px;padding:16px;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:14px;line-height:1.5}
+blockquote{margin:18px 0;padding:12px 18px;border-left:4px solid #555;background:#f8f8f8}
+</style>
+</head>
+<body>
+<h1>Proposta de solução — Recuperação automática de acesso do corretor</h1>
+
+<h2>1. Cenário atual</h2>
+<p>Atualmente, existe uma dificuldade no processo de recuperação de acesso dos corretores à plataforma.</p>
+<p>Considerando a regra de negócio de que o usuário fica <strong>inativo após 6 meses sem realizar login</strong>, o corretor pode tentar acessar a plataforma após esse período e não conseguir prosseguir normalmente.</p>
+<p>Nesse cenário, a recuperação do acesso acaba dependendo de intervenção manual de pessoas responsáveis pelo atendimento, gerando:</p>
+<ul><li>abertura de chamados;</li><li>trabalho operacional;</li><li>dependência de outras pessoas para uma atividade simples;</li><li>aumento do tempo para o corretor recuperar o acesso;</li><li>custo operacional desnecessário.</li></ul>
+<p>Além da questão técnica, existe uma <strong>deficiência de processo</strong>. Uma atividade que pode ser realizada de forma automatizada e self-service está sendo tratada manualmente.</p>
+
+<h2>2. Regra de negócio considerada</h2>
+<p>Para esta proposta, será considerada a seguinte regra:</p>
+<blockquote>Um usuário será considerado inativo quando estiver há mais de 6 meses sem realizar login na plataforma.</blockquote>
+<p>A tabela de usuários já possui a informação referente ao último acesso:</p>
+<pre>USUARIO
+-------------------------
+ID
+CPF
+EMAIL
+STATUS
+ULTIMO_LOGIN</pre>
+<p>Exemplo:</p><pre>ULTIMO_LOGIN = 2026-01-10</pre>
+<p>Se o usuário tentar acessar a plataforma em:</p><pre>2026-07-11</pre>
+<p>ele estará há mais de 6 meses sem realizar login e deverá entrar no fluxo de recuperação de acesso.</p>
+
+<h2>3. Solução proposta</h2>
+<p>A proposta é utilizar a própria tentativa de login para identificar automaticamente essa situação.</p>
+<div class="diagram">POST /login
+        |
+        v
+Busca usuário
+        |
+        v
+Verifica último login
+        |
+        +---- Usuário ativo
+        |         |
+        |         v
+        |      Login normal
+        |
+        +---- Mais de 6 meses
+                  |
+                  v
+          Retorna situação específica
+                  |
+                  v
+          Front-end redireciona
+          para recuperação de acesso</div>
+
+<h2>4. Alteração no backend</h2>
+<p>Durante o processo de login, o backend deve consultar o usuário e verificar a data do último login.</p>
+<pre>LocalDateTime limitDate = LocalDateTime.now().minusMonths(6);
+
+if (user.getLastLogin() == null ||
+    user.getLastLogin().isBefore(limitDate)) {
+
+    throw new UserInactiveException();
+}</pre>
+<p>O ideal é retornar um código de negócio específico para que o front-end saiba exatamente qual fluxo deve executar.</p>
+<pre>HTTP/1.1 403 Forbidden
+
+{
+    "code": "USER_INACTIVE",
+    "message": "User inactive due to inactivity period."
+}</pre>
+
+<h2>5. Comportamento do Front-end</h2>
+<p>Ao receber o código <code>USER_INACTIVE</code>, o front-end deve direcionar o corretor automaticamente para uma tela de recuperação de acesso.</p>
+<pre>if (response.code === "USER_INACTIVE") {
+    redirect("/recover-access");
+}</pre>
+
+<h2>6. Fluxo de recuperação</h2>
+<div class="diagram">Usuário tenta realizar login
+        |
+        v
+Sistema identifica usuário inativo
+        |
+        v
+Front-end direciona para "Recuperar acesso"
+        |
+        v
+Usuário informa seus dados
+        |
+        v
+Sistema valida o usuário
+        |
+        v
+Gera código temporário
+        |
+        +--------> E-mail
+        |
+        +--------> WhatsApp
+        |
+        v
+Usuário informa o código
+        |
+        v
+Sistema valida o código
+        |
+        v
+Permite definir nova senha
+        |
+        v
+Usuário é reativado
+        |
+        v
+Novo login</div>
+
+<h2>7. Geração do código</h2>
+<p>O código deve ser temporário e possuir validade limitada.</p>
+<pre>String code = generateRandomCode();
+
+recoveryCodeRepository.save(
+    RecoveryCode.builder()
+        .userId(user.getId())
+        .code(hash(code))
+        .expiresAt(LocalDateTime.now().plusMinutes(10))
+        .build()
+);</pre>
+<p>O código original deve ser enviado ao usuário por um canal previamente validado, como e-mail ou WhatsApp.</p>
+<p>O banco deve armazenar preferencialmente apenas o hash do código.</p>
+
+<h2>8. Validação do código</h2>
+<pre>POST /users/recovery/verify-code</pre>
+<pre>{
+    "user": "12345678900",
+    "code": "834921"
+}</pre>
+<pre>RecoveryCode recoveryCode =
+    recoveryCodeRepository.findValidByUserId(userId);
+
+if (!matches(code, recoveryCode.getCode())) {
+    throw new InvalidRecoveryCodeException();
+}
+
+if (recoveryCode.getExpiresAt().isBefore(LocalDateTime.now())) {
+    throw new ExpiredRecoveryCodeException();
+}</pre>
+
+<h2>9. Redefinição da senha</h2>
+<pre>POST /users/recovery/password
+
+{
+    "recoveryToken": "...",
+    "newPassword": "********"
+}</pre>
+<ol><li>validar o token de recuperação;</li><li>validar as regras da nova senha;</li><li>atualizar a senha;</li><li>reativar o usuário;</li><li>invalidar o código/token utilizado;</li><li>registrar a operação em log/auditoria.</li></ol>
+<pre>user.setPassword(passwordEncoder.encode(newPassword));
+user.setStatus(UserStatus.ACTIVE);
+
+userRepository.save(user);
+
+recoveryTokenService.invalidate(token);
+auditService.register("USER_ACCESS_RECOVERED", user.getId());</pre>
+
+<h2>10. Atualização do último login</h2>
+<p>Após um login realizado com sucesso, o sistema deve atualizar a data do último login.</p>
+<pre>UPDATE USUARIO
+SET ULTIMO_LOGIN = CURRENT_TIMESTAMP
+WHERE ID = :userId;</pre>
+
+<h2>11. Auditoria</h2>
+<pre>USER_INACTIVE_DETECTED
+RECOVERY_CODE_GENERATED
+RECOVERY_CODE_VALIDATED
+PASSWORD_CHANGED
+USER_REACTIVATED
+USER_LOGIN_SUCCESS</pre>
+<p>Com informações como:</p>
+<pre>userId
+dateTime
+event
+correlationId
+ip
+channel</pre>
+<p>Não deve ser registrado o código de recuperação ou a senha em texto puro.</p>
+
+<h2>12. Resultado esperado</h2>
+<p>Com essa alteração, o processo deixa de ser:</p>
+<div class="diagram">Corretor
+   ↓
+Não consegue acessar
+   ↓
+Procura atendimento
+   ↓
+Abre chamado
+   ↓
+Pessoa analisa
+   ↓
+Pessoa realiza procedimento
+   ↓
+Corretor recupera acesso</div>
+
+<p>E passa a ser:</p>
+<div class="diagram">Corretor
+   ↓
+Tenta acessar
+   ↓
+Sistema identifica inatividade
+   ↓
+Front-end direciona para recuperação
+   ↓
+Código por e-mail/WhatsApp
+   ↓
+Validação
+   ↓
+Nova senha
+   ↓
+Usuário reativado
+   ↓
+Acesso liberado</div>
+
+<h2>13. Ponto principal da proposta</h2>
+<p>A principal melhoria não é apenas implementar uma nova API ou uma nova tela.</p>
+<p>É <strong>revisar o processo atual e retirar uma atividade operacional que pode ser realizada pelo próprio usuário</strong>.</p>
+<p>O sistema já possui uma informação importante — a data do último login. Essa informação pode ser utilizada para identificar automaticamente usuários inativos e iniciar um fluxo seguro de recuperação.</p>
+<p>Dessa forma, a solução atua simultaneamente em três pontos:</p>
+<div class="diagram">PROCESSO
+↓
+Menos intervenção manual
+
+SISTEMA
+↓
+Identificação automática da inatividade
+
+USUÁRIO
+↓
+Recuperação de acesso self-service</div>
+<p>O objetivo final é reduzir o volume de atendimento, diminuir o tempo de recuperação do acesso e eliminar uma etapa operacional que não precisa depender de intervenção humana.</p>
+</body>
+</html>
