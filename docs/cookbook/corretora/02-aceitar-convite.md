@@ -4,11 +4,14 @@ Se você **não é o dono**, seu papel é aceitar o convite da corretora. Você 
 cria nada — quem monta a corretora é o administrador. Esta página cobre **todos**
 os passos, do login à corretora aparecendo no seu seletor.
 
+No exemplo, é o caminho de **Barrichello** e **Massa**: cada um aceita o convite
+da **Senna Racing Seguros**.
+
 ## Pré-requisitos
 
 - Ter uma [conta criada](01-criar-conta.md) com o **mesmo e-mail** que o
   administrador usou no convite.
-- O administrador já ter [enviado o convite](03-convidar.md).
+- O administrador já ter [enviado o convite](04-convidar.md).
 
 !!! info "Você não depende do e-mail de notificação"
     Mesmo que o e-mail de aviso não chegue, o convite aparece dentro do sistema,
@@ -50,8 +53,8 @@ os passos, do login à corretora aparecendo no seu seletor.
   <rect x="228" y="132" width="40" height="40" rx="8" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
   <rect x="236" y="143" width="24" height="17" rx="2" fill="none" stroke="currentColor" stroke-opacity="0.55"/>
   <polyline points="236,145 248,154 260,145" fill="none" stroke="currentColor" stroke-opacity="0.55"/>
-  <text x="286" y="146" font-size="13.5" font-weight="700" fill="currentColor">Corretora Exemplo</text>
-  <text x="286" y="167" font-size="11.5" fill="currentColor" fill-opacity="0.55">Convite pendente · convidado por Renato</text>
+  <text x="286" y="146" font-size="13.5" font-weight="700" fill="currentColor">Senna Racing Seguros</text>
+  <text x="286" y="167" font-size="11.5" fill="currentColor" fill-opacity="0.55">Convite pendente · convidado por Senna</text>
   <!-- botão Aceitar (preenchido leve) -->
   <rect x="548" y="136" width="88" height="32" rx="7" fill="currentColor" fill-opacity="0.14"/>
   <text x="592" y="157" font-size="12.5" font-weight="600" fill="currentColor" text-anchor="middle">Aceitar</text>
@@ -96,7 +99,7 @@ os passos, do login à corretora aparecendo no seu seletor.
 2. O sistema recarrega suas permissões (o menu que você vê vem do servidor).
 3. **Importante:** aceitar o convite te torna **membro**, mas **ainda não te dá
    telas**. O que você vê depende do **perfil de acesso** que o administrador vai
-   te atribuir — ver [4 · Atribuir perfil de acesso](04-perfil-acesso.md).
+   te atribuir — ver [5 · Atribuir perfil de acesso](05-perfil-acesso.md).
 
 !!! tip "Recusar por engano"
     Recusar pede confirmação e **não é definitivo**: o administrador pode reenviar
@@ -114,4 +117,4 @@ Se a tela diz **"Nenhum convite no momento"**, na ordem de probabilidade:
    outro (ex.: pessoal × corporativo).
 3. **Convite ainda não enviado.** Alinhe com o administrador.
 
-→ Próximo (para o dono): [3 · Convidar a equipe](03-convidar.md)
+→ Próximo (para o dono): [3 · Criar a corretora (onboarding)](03-criar-corretora.md)

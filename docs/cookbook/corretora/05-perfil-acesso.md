@@ -1,4 +1,4 @@
-# 4 · Atribuir perfil de acesso
+# 5 · Atribuir perfil de acesso
 
 Aceitar o convite torna a pessoa **membro** da corretora — mas ainda **sem telas**.
 Quem decide o que cada um vê e faz é o **perfil de acesso**. Aqui você coloca a
@@ -8,12 +8,12 @@ pessoa no "grupo de permissão" certo.
     - **Perfil de acesso** (`admin`, `gerente`, `vendedor`, …) = **o que a pessoa
       vê e faz** nas telas. É o desta página.
     - **Papel de time** (`director`, `manager`, `seller`) = **quanto ela ganha** no
-      rateio. É o do [Passo 5](05-time.md).
+      rateio. É o do [Passo 6](06-time.md).
 
 ## Pré-requisito
 
 A pessoa precisa ter **aceitado o convite** (status **ativo** em
-[Usuários](03-convidar.md)). Quem está só **convidado** ainda não pode receber
+[Usuários](04-convidar.md)). Quem está só **convidado** ainda não pode receber
 perfil.
 
 ## Os perfis disponíveis
@@ -35,10 +35,10 @@ Os perfis vêm do servidor (RBAC) e têm nomes em português:
 perfil**.
 
 <figure>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" role="img"
-     aria-label="Tela Usuários do perfil com listas Com acesso e Sem acesso e botões de conceder"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img"
+     aria-label="Tela Usuários do perfil Vendedor com listas Com acesso e Sem acesso e botão Conceder"
      style="width:100%;height:auto;color:var(--md-default-fg-color);font-family:var(--md-text-font-family,system-ui,sans-serif)">
-  <rect x="4" y="4" width="752" height="462" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
+  <rect x="4" y="4" width="752" height="412" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
   <line x1="4" y1="38" x2="756" y2="38" stroke="currentColor" stroke-opacity="0.2"/>
   <circle cx="24" cy="21" r="4" fill="currentColor" fill-opacity="0.4"/>
   <circle cx="38" cy="21" r="4" fill="currentColor" fill-opacity="0.4"/>
@@ -46,7 +46,7 @@ perfil**.
   <rect x="80" y="11" width="280" height="20" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.25"/>
   <text x="94" y="25" font-size="11" fill="currentColor" fill-opacity="0.55">webd.gestao.one</text>
 
-  <line x1="190" y1="38" x2="190" y2="466" stroke="currentColor" stroke-opacity="0.15"/>
+  <line x1="190" y1="38" x2="190" y2="416" stroke="currentColor" stroke-opacity="0.15"/>
   <text x="22" y="74"  font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
   <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Usuários</text>
   <rect x="8" y="120" width="176" height="28" rx="6" fill="currentColor" fill-opacity="0.08"/>
@@ -58,12 +58,12 @@ perfil**.
   <!-- conteúdo -->
   <text x="210" y="64" font-size="11" fill="currentColor" fill-opacity="0.5">‹ Voltar aos perfis</text>
   <text x="210" y="90" font-size="17" font-weight="700" fill="currentColor">Usuários do perfil</text>
-  <text x="210" y="110" font-size="11.5" fill="currentColor" fill-opacity="0.55">Quem tem o perfil Vendedor em Corretora Exemplo.</text>
+  <text x="210" y="110" font-size="11.5" fill="currentColor" fill-opacity="0.55">Quem tem o perfil Vendedor em Senna Racing Seguros.</text>
 
   <!-- unidade -->
   <text x="210" y="138" font-size="11.5" fill="currentColor" fill-opacity="0.7">Unidade</text>
   <rect x="210" y="146" width="300" height="32" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
-  <text x="224" y="167" font-size="12.5" fill="currentColor" fill-opacity="0.9">Matriz — SP</text>
+  <text x="224" y="167" font-size="12.5" fill="currentColor" fill-opacity="0.9">BOX SENNA — SEN</text>
   <path d="M494 158 l6 6 l6 -6" fill="none" stroke="currentColor" stroke-opacity="0.5"/>
   <text x="210" y="194" font-size="10.5" fill="currentColor" fill-opacity="0.5">O acesso é concedido nesta unidade.</text>
 
@@ -72,37 +72,26 @@ perfil**.
   <text x="224" y="227" font-size="12.5" fill="currentColor" fill-opacity="0.45">Nome ou e-mail</text>
 
   <!-- com acesso -->
-  <text x="210" y="264" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.6">COM ACESSO (1)</text>
-  <rect x="210" y="272" width="530" height="40" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.18"/>
-  <circle cx="232" cy="292" r="11" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
-  <text x="232" y="296" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.7" text-anchor="middle">B</text>
-  <text x="252" y="296" font-size="12.5" fill="currentColor">Bruno Vendas · bruno@corretora.com.br</text>
-  <rect x="636" y="279" width="90" height="26" rx="6" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
-  <text x="681" y="296" font-size="11.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">Remover</text>
+  <text x="210" y="264" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.6">COM ACESSO (0)</text>
+  <rect x="210" y="272" width="530" height="36" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-dasharray="4 4"/>
+  <text x="228" y="294" font-size="12" fill="currentColor" fill-opacity="0.45">Ninguém ainda — conceda a alguém abaixo.</text>
 
   <!-- sem acesso -->
-  <text x="210" y="346" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.6">SEM ACESSO (2)</text>
-  <rect x="210" y="354" width="530" height="40" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.18"/>
-  <circle cx="232" cy="374" r="11" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
-  <text x="232" y="378" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.7" text-anchor="middle">C</text>
-  <text x="252" y="378" font-size="12.5" fill="currentColor">Carla Vendas · carla@corretora.com.br</text>
-  <rect x="636" y="361" width="90" height="26" rx="6" fill="currentColor" fill-opacity="0.14"/>
-  <text x="681" y="378" font-size="11.5" font-weight="600" fill="currentColor" text-anchor="middle">Conceder</text>
-
-  <rect x="210" y="404" width="530" height="40" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.18"/>
-  <circle cx="232" cy="424" r="11" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
-  <text x="232" y="428" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.7" text-anchor="middle">M</text>
-  <text x="252" y="428" font-size="12.5" fill="currentColor">Marina Gerência · marina.vendas@corretora.com.br</text>
-  <rect x="636" y="411" width="90" height="26" rx="6" fill="currentColor" fill-opacity="0.14"/>
-  <text x="681" y="428" font-size="11.5" font-weight="600" fill="currentColor" text-anchor="middle">Conceder</text>
+  <text x="210" y="342" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.6">SEM ACESSO (1)</text>
+  <rect x="210" y="350" width="530" height="40" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.18"/>
+  <circle cx="232" cy="370" r="11" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
+  <text x="232" y="374" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.7" text-anchor="middle">M</text>
+  <text x="252" y="374" font-size="12.5" fill="currentColor">Massa · massa@f1.test</text>
+  <rect x="636" y="357" width="90" height="26" rx="6" fill="currentColor" fill-opacity="0.14"/>
+  <text x="681" y="374" font-size="11.5" font-weight="600" fill="currentColor" text-anchor="middle">Conceder</text>
 
   <g font-size="12" font-weight="700" text-anchor="middle">
     <circle cx="210" cy="146" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
     <text x="210" y="150" fill="currentColor">1</text>
-    <circle cx="210" cy="346" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
-    <text x="210" y="350" fill="currentColor">2</text>
-    <circle cx="636" cy="361" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
-    <text x="636" y="365" fill="currentColor">3</text>
+    <circle cx="210" cy="342" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <text x="210" y="346" fill="currentColor">2</text>
+    <circle cx="636" cy="357" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <text x="636" y="361" fill="currentColor">3</text>
   </g>
 </svg>
 <figcaption>Tela <strong>Usuários do perfil</strong> — duas listas e um botão por linha.</figcaption>
@@ -133,10 +122,11 @@ quem enxerga aquele perfil naquela unidade).
   botões sem permissão aparecem **desabilitados**.
 
 !!! tip "Faça o combo certo por pessoa"
-    No exemplo: Marina recebe o perfil **`gerente`**; Bruno e Carla, **`vendedor`**.
-    Isso é **acesso** — o quanto cada um ganha vem depois, no [time](05-time.md).
+    No exemplo: **Barrichello** recebe o perfil **`gerente`**; **Massa**, o
+    **`vendedor`**. Isso é **acesso** — o quanto cada um ganha vem depois, no
+    [time](06-time.md).
 
 !!! success "Checkpoint"
     Cada pessoa aparece em **Com acesso** no perfil certo, na unidade certa.
 
-→ Próximo: [5 · Criar um time e distribuir papéis](05-time.md)
+→ Próximo: [6 · Montar o time comercial](06-time.md)
