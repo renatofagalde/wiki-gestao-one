@@ -2,54 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://renatofagalde.github.io/wiki-gestao-one/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
          <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
          <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/tiss/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
          <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/webflow/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
          <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
          <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/01-criar-conta/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/02-esperar-convite/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/02-aceitar-convite/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/03-convidar/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/03-criar-corretora/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/04-perfil-acesso/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/04-convidar/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/05-time/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/05-perfil-acesso/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/06-plano/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/06-time/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/07-lead-proposta/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/07-operadoras/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
     <url>
-         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/08-confirmar-resultado/</loc>
-         <lastmod>2026-10-07</lastmod>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/08-criar-plano/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/09-faixas-rateio/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/10-cliente/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/11-lead/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/12-proposta-apolice/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/13-confirmar-comissoes/</loc>
+         <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+         <loc>https://renatofagalde.github.io/wiki-gestao-one/cookbook/corretora/14-recebiveis/</loc>
+         <lastmod>2026-10-12</lastmod>
     </url>
 </urlset>
