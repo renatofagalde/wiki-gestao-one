@@ -27,7 +27,7 @@ entrar com **Google** (quando disponível).
   <rect x="262" y="148" width="236" height="32" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
   <text x="262" y="200" font-size="11" fill="currentColor" fill-opacity="0.7">E-mail</text>
   <rect x="262" y="208" width="236" height="32" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
-  <text x="276" y="229" font-size="12" fill="currentColor" fill-opacity="0.4">marina.vendas@corretora.com.br</text>
+  <text x="276" y="229" font-size="12" fill="currentColor" fill-opacity="0.4">senna@f1.test</text>
   <text x="262" y="260" font-size="11" fill="currentColor" fill-opacity="0.7">Senha</text>
   <rect x="262" y="268" width="236" height="32" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
   <text x="262" y="320" font-size="11" fill="currentColor" fill-opacity="0.7">Confirmar senha</text>
@@ -70,13 +70,12 @@ entrar com **Google** (quando disponível).
 
     Você vai participar de uma corretora que **outra pessoa** administra.
 
-    → [2 · Aceitar o convite](02-esperar-convite.md)
+    → [2 · Aceitar o convite](02-aceitar-convite.md)
 
 - :material-crown: **Sou o dono da corretora**
 
-    Você vai **criar e administrar** a corretora. Depois do onboarding, monte a
-    equipe.
+    Você vai **criar e administrar** a corretora, a partir do onboarding.
 
-    → [3 · Convidar a equipe](03-convidar.md)
+    → [3 · Criar a corretora (onboarding)](03-criar-corretora.md)
 
 </div>
