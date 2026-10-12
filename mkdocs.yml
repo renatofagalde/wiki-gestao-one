@@ -55,12 +55,18 @@ nav:
       - Corretora:
           - Visão geral: cookbook/corretora/index.md
           - 1 · Criar sua conta: cookbook/corretora/01-criar-conta.md
-          - 2 · Aceitar o convite: cookbook/corretora/02-esperar-convite.md
-          - 3 · Convidar a equipe: cookbook/corretora/03-convidar.md
-          - 4 · Atribuir perfil de acesso: cookbook/corretora/04-perfil-acesso.md
-          - 5 · Criar um time: cookbook/corretora/05-time.md
-          - 6 · Plano de comissionamento: cookbook/corretora/06-plano.md
-          - 7 · Lead vira proposta: cookbook/corretora/07-lead-proposta.md
-          - 8 · Confirmar e ver o resultado: cookbook/corretora/08-confirmar-resultado.md
+          - 2 · Aceitar o convite: cookbook/corretora/02-aceitar-convite.md
+          - 3 · Criar a corretora (onboarding): cookbook/corretora/03-criar-corretora.md
+          - 4 · Convidar a equipe: cookbook/corretora/04-convidar.md
+          - 5 · Atribuir perfil de acesso: cookbook/corretora/05-perfil-acesso.md
+          - 6 · Montar o time comercial: cookbook/corretora/06-time.md
+          - 7 · Catálogo — operadoras e produtos: cookbook/corretora/07-operadoras.md
+          - 8 · Criar o plano de comissão: cookbook/corretora/08-criar-plano.md
+          - 9 · Montar as faixas e o rateio: cookbook/corretora/09-faixas-rateio.md
+          - 10 · Cadastrar o cliente: cookbook/corretora/10-cliente.md
+          - 11 · Abrir e converter o lead: cookbook/corretora/11-lead.md
+          - 12 · Proposta e emissão da apólice: cookbook/corretora/12-proposta-apolice.md
+          - 13 · Confirmar as comissões: cookbook/corretora/13-confirmar-comissoes.md
+          - 14 · Recebíveis — o dinheiro: cookbook/corretora/14-recebiveis.md
       - WebFlow: cookbook/webflow.md
       - TISS: cookbook/tiss.md
