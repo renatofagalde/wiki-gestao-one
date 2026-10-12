@@ -1,10 +1,10 @@
-# 3 · Sou dono — convidar a equipe
+# 4 · Convidar a equipe
 
 Com a corretora criada, o primeiro passo é **colocar as pessoas dentro dela**. A
 equipe precisa existir como **usuário da corretora** antes de qualquer coisa — sem
 isso, ninguém entra num time nem recebe comissão.
 
-No exemplo: convide **Marina**, **Bruno** e **Carla**.
+No exemplo: o **Senna** convida **Barrichello** e **Massa**.
 
 ## Pré-requisitos
 
@@ -43,7 +43,7 @@ No exemplo: convide **Marina**, **Bruno** e **Carla**.
   <text x="22" y="238" font-size="13" fill="currentColor" fill-opacity="0.7">Configurações</text>
 
   <text x="210" y="72" font-size="17" font-weight="700" fill="currentColor">Usuários</text>
-  <text x="210" y="92" font-size="11.5" fill="currentColor" fill-opacity="0.55">Quem tem acesso a Corretora Exemplo.</text>
+  <text x="210" y="92" font-size="11.5" fill="currentColor" fill-opacity="0.55">Quem tem acesso a Senna Racing Seguros.</text>
   <!-- botão Convidar -->
   <rect x="612" y="58" width="126" height="32" rx="7" fill="currentColor" fill-opacity="0.14"/>
   <rect x="624" y="67" width="15" height="11" rx="1" fill="none" stroke="currentColor" stroke-opacity="0.7"/>
@@ -55,7 +55,7 @@ No exemplo: convide **Marina**, **Bruno** e **Carla**.
   <text x="230" y="150" font-size="14" font-weight="700" fill="currentColor">Convidar usuário</text>
   <text x="230" y="182" font-size="12" fill="currentColor" fill-opacity="0.7">E-mail do convidado</text>
   <rect x="230" y="192" width="410" height="36" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.3"/>
-  <text x="244" y="215" font-size="12.5" fill="currentColor" fill-opacity="0.9">marina.vendas@corretora.com.br</text>
+  <text x="244" y="215" font-size="12.5" fill="currentColor" fill-opacity="0.9">barrichello@f1.test</text>
   <text x="230" y="248" font-size="11" fill="currentColor" fill-opacity="0.55">Use o e-mail exato da conta da pessoa — pontos contam.</text>
   <rect x="230" y="268" width="150" height="36" rx="7" fill="currentColor" fill-opacity="0.14"/>
   <text x="305" y="291" font-size="12.5" font-weight="600" fill="currentColor" text-anchor="middle">Enviar convite</text>
@@ -79,11 +79,11 @@ No exemplo: convide **Marina**, **Bruno** e **Carla**.
 | # | Onde clicar | O que preencher | Regra |
 | --- | --- | --- | --- |
 | **1** | Botão **Convidar** (topo direito) | — | Abre o formulário |
-| **2** | Campo **E-mail do convidado** | E-mail **exato** da conta. Ex.: `marina.vendas@corretora.com.br` | Precisa ter `@` e domínio válido |
+| **2** | Campo **E-mail do convidado** | E-mail **exato** da conta. Ex.: `barrichello@f1.test` | Precisa ter `@` e domínio válido |
 | **3** | Botão **Enviar convite** | — | Fica **desabilitado** até o e-mail ser válido |
 
-Repita para cada pessoa (Marina, Bruno, Carla). Depois, feche o formulário no
-botão **Fechar**.
+Repita para cada pessoa (**Barrichello** e **Massa**). Depois, feche o formulário
+no botão **Fechar**.
 
 ## O resultado
 
@@ -93,7 +93,7 @@ Cada convidado passa a aparecer na lista de **Usuários** com o status
 | Estado na lista | Significado |
 | --- | --- |
 | **convidado** | Convite enviado, aguardando a pessoa aceitar |
-| **ativo** | A pessoa [aceitou](02-esperar-convite.md) — já pode entrar num time e receber perfil |
+| **ativo** | A pessoa [aceitou](02-aceitar-convite.md) — já pode entrar num time e receber perfil |
 
 !!! danger "O erro nº 1 — e-mail com typo"
     Convidar um e-mail **sem conta não retorna erro** na tela (é anti-enumeração).
@@ -102,7 +102,7 @@ Cada convidado passa a aparecer na lista de **Usuários** com o status
     endereço e reenvie.
 
 !!! success "Checkpoint"
-    As três pessoas aparecem em **Usuários**. Antes de montar o time, confirme que
-    elas **aceitaram** (status **ativo**) — os próximos passos dependem disso.
+    Barrichello e Massa aparecem em **Usuários**. Antes de montar o time, confirme
+    que eles **aceitaram** (status **ativo**) — os próximos passos dependem disso.
 
-→ Próximo: [4 · Atribuir perfil de acesso](04-perfil-acesso.md)
+→ Próximo: [5 · Atribuir perfil de acesso](05-perfil-acesso.md)
