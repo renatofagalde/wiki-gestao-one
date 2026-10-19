@@ -55,9 +55,9 @@ nav:
       - Corretora:
           - Visão geral: cookbook/corretora/index.md
           - 1 · Criar sua conta: cookbook/corretora/01-criar-conta.md
-          - 2 · Aceitar o convite: cookbook/corretora/02-aceitar-convite.md
-          - 3 · Criar a corretora (onboarding): cookbook/corretora/03-criar-corretora.md
-          - 4 · Convidar a equipe: cookbook/corretora/04-convidar.md
+          - 2 · Criar a corretora (onboarding): cookbook/corretora/02-criar-corretora.md
+          - 3 · Convidar a equipe: cookbook/corretora/03-convidar.md
+          - 4 · Aceitar o convite: cookbook/corretora/04-aceitar-convite.md
           - 5 · Atribuir perfil de acesso: cookbook/corretora/05-perfil-acesso.md
           - 6 · Montar o time comercial: cookbook/corretora/06-time.md
           - 7 · Catálogo — operadoras e produtos: cookbook/corretora/07-operadoras.md
