@@ -1,4 +1,4 @@
-# 2 · Sou usuário — aceitar o convite
+# 4 · Sou usuário — aceitar o convite
 
 Se você **não é o dono**, seu papel é aceitar o convite da corretora. Você não
 cria nada — quem monta a corretora é o administrador. Esta página cobre **todos**
@@ -11,7 +11,7 @@ da **Senna Racing Seguros**.
 
 - Ter uma [conta criada](01-criar-conta.md) com o **mesmo e-mail** que o
   administrador usou no convite.
-- O administrador já ter [enviado o convite](04-convidar.md).
+- O administrador já ter [enviado o convite](03-convidar.md).
 
 !!! info "Você não depende do e-mail de notificação"
     Mesmo que o e-mail de aviso não chegue, o convite aparece dentro do sistema,
@@ -117,4 +117,4 @@ Se a tela diz **"Nenhum convite no momento"**, na ordem de probabilidade:
    outro (ex.: pessoal × corporativo).
 3. **Convite ainda não enviado.** Alinhe com o administrador.
 
-→ Próximo (para o dono): [3 · Criar a corretora (onboarding)](03-criar-corretora.md)
+→ Próximo: [5 · Atribuir perfil de acesso](05-perfil-acesso.md)

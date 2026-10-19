@@ -6,7 +6,7 @@ Com o [plano criado](08-criar-plano.md), abra-o para montar o **rateio**. Cada
 
 ## A tela — Detalhe do plano
 
-**Onde:** menu → **Comissões** → **Planos** → abrir o plano.
+**Onde:** menu → **Comissões** → **Planos de comissão** → abrir o plano.
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img"

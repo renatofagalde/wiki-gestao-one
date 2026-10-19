@@ -1,4 +1,4 @@
-# 3 · Sou dono — criar a corretora (onboarding)
+# 2 · Sou dono — criar a corretora (onboarding)
 
 Se você **é o dono**, o passo depois de criar a conta é **montar a corretora**. É o
 onboarding: uma tela só, com os dados da empresa e da primeira unidade. A partir
@@ -9,7 +9,7 @@ No exemplo, é o **Senna** criando a **Senna Racing Seguros**.
 !!! note "Criar conta ≠ ter corretora"
     Criar a conta (passo 1) só cria **você**. A corretora é um vínculo que nasce
     aqui — por isso o onboarding é uma **opção no menu**, nunca algo forçado. Quem
-    foi convidado pula este passo e vai para [aceitar o convite](02-aceitar-convite.md).
+    foi convidado pula este passo e vai para [aceitar o convite](04-aceitar-convite.md).
 
 ## Pré-requisito
 
@@ -18,7 +18,7 @@ No exemplo, é o **Senna** criando a **Senna Racing Seguros**.
 
 ## A tela — Criar sua corretora
 
-**Onde:** menu → **Criar corretora** (onboarding).
+**Onde:** menu → **Configurações** → **Onboarding** → botão **Criar corretora**.
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" role="img"
@@ -95,4 +95,4 @@ No exemplo, é o **Senna** criando a **Senna Racing Seguros**.
     A **Senna Racing Seguros** aparece no seletor e você vê o menu de dono. Agora
     é hora de trazer a equipe.
 
-→ Próximo: [4 · Convidar a equipe](04-convidar.md)
+→ Próximo: [3 · Convidar a equipe](03-convidar.md)

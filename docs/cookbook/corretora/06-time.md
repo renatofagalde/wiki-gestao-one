@@ -11,7 +11,7 @@ papel.
 ## Pré-requisito
 
 Só entra no time quem já é **usuário da corretora** (status **ativo**). Se o nome
-não aparece na lista de membros, a pessoa ainda não [aceitou o convite](02-aceitar-convite.md).
+não aparece na lista de membros, a pessoa ainda não [aceitou o convite](04-aceitar-convite.md).
 
 ## A tela — Times
 

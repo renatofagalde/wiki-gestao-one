@@ -5,11 +5,11 @@ virar um lead. Esta tela é o cadastro de **Pessoas** (clientes) da corretora.
 
 ## A tela — Pessoas
 
-**Onde:** menu → **Clientes** (Pessoas).
+**Onde:** menu → **Pessoas**.
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290" role="img"
-     aria-label="Tela Clientes com busca por aproximação e lista de pessoas"
+     aria-label="Tela Pessoas com busca por aproximação e lista de pessoas"
      style="width:100%;height:auto;color:var(--md-default-fg-color);font-family:var(--md-text-font-family,system-ui,sans-serif)">
   <rect x="4" y="4" width="752" height="282" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
   <line x1="4" y1="38" x2="756" y2="38" stroke="currentColor" stroke-opacity="0.2"/>
@@ -18,7 +18,7 @@ virar um lead. Esta tela é o cadastro de **Pessoas** (clientes) da corretora.
   <line x1="190" y1="38" x2="190" y2="286" stroke="currentColor" stroke-opacity="0.15"/>
   <text x="22" y="66" font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
   <rect x="8" y="78" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="78" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
-  <text x="22" y="96" font-size="12.5" font-weight="700" fill="currentColor">Clientes</text>
+  <text x="22" y="96" font-size="12.5" font-weight="700" fill="currentColor">Pessoas</text>
   <text x="22" y="122" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
 
   <text x="210" y="66" font-size="17" font-weight="700" fill="currentColor">Pessoas</text>

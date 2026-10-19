@@ -59,9 +59,9 @@ Cada passo é **uma tela**. Mostra **onde clicar**, **o que preencher** e **o
 resultado** — o que muda no sistema e quem passa a enxergar o quê.
 
 1. [Criar sua conta](01-criar-conta.md)
-2. [Sou usuário — aceitar o convite](02-aceitar-convite.md)
-3. [Sou dono — criar a corretora (onboarding)](03-criar-corretora.md)
-4. [Convidar a equipe](04-convidar.md)
+2. [Sou dono — criar a corretora (onboarding)](02-criar-corretora.md)
+3. [Convidar a equipe](03-convidar.md)
+4. [Sou usuário — aceitar o convite](04-aceitar-convite.md)
 5. [Atribuir perfil de acesso](05-perfil-acesso.md)
 6. [Montar o time comercial](06-time.md)
 7. [Catálogo — operadoras e produtos](07-operadoras.md)
@@ -73,7 +73,7 @@ resultado** — o que muda no sistema e quem passa a enxergar o quê.
 13. [Confirmar as comissões](13-confirmar-comissoes.md)
 14. [Recebíveis — o dinheiro distribuído](14-recebiveis.md)
 
-!!! tip "Dois caminhos no começo"
-    Os passos 1–3 se dividem por papel: quem **é convidado** segue para o passo 2
-    (aceitar o convite); quem **monta a corretora** segue para o passo 3
-    (onboarding). Do passo 4 em diante, o roteiro é do **dono**.
+!!! tip "Quem faz o quê no começo"
+    O **dono** cria a corretora (passo 2) e convida a equipe (passo 3). Quem **é
+    convidado** entra no passo 4 (aceitar o convite). Do passo 5 em diante, o
+    roteiro é do **dono** (perfil de acesso, time, planos, vendas).

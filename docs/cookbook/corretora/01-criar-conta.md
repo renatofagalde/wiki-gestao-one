@@ -66,16 +66,16 @@ entrar com **Google** (quando disponível).
 
 <div class="grid cards" markdown>
 
-- :material-account-clock: **Sou usuário (fui/serei convidado)**
-
-    Você vai participar de uma corretora que **outra pessoa** administra.
-
-    → [2 · Aceitar o convite](02-aceitar-convite.md)
-
 - :material-crown: **Sou o dono da corretora**
 
     Você vai **criar e administrar** a corretora, a partir do onboarding.
 
-    → [3 · Criar a corretora (onboarding)](03-criar-corretora.md)
+    → [2 · Criar a corretora (onboarding)](02-criar-corretora.md)
+
+- :material-account-clock: **Sou usuário (fui/serei convidado)**
+
+    Você vai participar de uma corretora que **outra pessoa** administra.
+
+    → [4 · Aceitar o convite](04-aceitar-convite.md)
 
 </div>

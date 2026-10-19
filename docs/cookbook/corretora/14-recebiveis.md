@@ -6,7 +6,7 @@ dele**. Recebíveis é a tela que mostra o **rateio** — a confirmação não m
 
 ## 14.1 · A visão do dono — por beneficiário
 
-**Onde:** menu → **Comissões** → **Recebíveis**.
+**Onde:** menu → **Comissões** → **Recebiveis da corretora**.
 
 Valores do exemplo, depois de confirmar as **parcelas 1 e 2** (líquido de R$ 90,00
 cada):
@@ -21,9 +21,9 @@ cada):
   <rect x="80" y="11" width="300" height="20" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.25"/><text x="94" y="25" font-size="11" fill="currentColor" fill-opacity="0.55">webd.gestao.one — Senna (dono/admin)</text>
   <line x1="190" y1="38" x2="190" y2="296" stroke="currentColor" stroke-opacity="0.15"/>
   <text x="22" y="66" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
-  <text x="32" y="92" font-size="12.5" fill="currentColor" fill-opacity="0.7">A confirmar</text>
+  <text x="32" y="92" font-size="12.5" fill="currentColor" fill-opacity="0.7">Comissões pendentes</text>
   <rect x="8" y="102" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="102" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
-  <text x="32" y="120" font-size="12.5" font-weight="700" fill="currentColor">Recebíveis</text>
+  <text x="32" y="120" font-size="11.5" font-weight="700" fill="currentColor">Recebiveis da corretora</text>
 
   <text x="210" y="66" font-size="17" font-weight="700" fill="currentColor">Recebíveis</text>
   <text x="210" y="92" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.55">CORRETORA — POR BENEFICIÁRIO</text>
@@ -45,8 +45,8 @@ vendedor; a **P2** dividiu `50 / 15 / 10 / 25` sobre o líquido.
 
 ## 14.2 · A visão do vendedor — só o dele
 
-O mesmo caminho, logado como **Massa**: ele vê **Seus recebíveis** — apenas os
-valores dele, sem o agregado da corretora.
+Logado como **Massa**, em **Comissões → Meus recebiveis**: ele vê **Seus
+recebíveis** — apenas os valores dele, sem o agregado da corretora.
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img"
@@ -59,7 +59,7 @@ valores dele, sem o agregado da corretora.
   <line x1="190" y1="38" x2="190" y2="246" stroke="currentColor" stroke-opacity="0.15"/>
   <text x="22" y="66" font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
   <rect x="8" y="78" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="78" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
-  <text x="22" y="96" font-size="12.5" font-weight="700" fill="currentColor">Seus recebíveis</text>
+  <text x="22" y="96" font-size="12.5" font-weight="700" fill="currentColor">Meus recebiveis</text>
 
   <text x="210" y="66" font-size="17" font-weight="700" fill="currentColor">Seus recebíveis</text>
   <g font-size="12.5">

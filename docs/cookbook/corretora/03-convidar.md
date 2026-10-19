@@ -1,4 +1,4 @@
-# 4 · Convidar a equipe
+# 3 · Convidar a equipe
 
 Com a corretora criada, o primeiro passo é **colocar as pessoas dentro dela**. A
 equipe precisa existir como **usuário da corretora** antes de qualquer coisa — sem
@@ -12,13 +12,20 @@ No exemplo: o **Senna** convida **Barrichello** e **Massa**.
 - A pessoa convidada **já tem conta** no sistema, com um e-mail conhecido.
 
 !!! warning "Convidar só funciona para quem já tem conta"
-    O convite é amarrado a uma **conta existente**. Se o e-mail não tem conta, o
-    sistema **não avisa** (resposta neutra, por segurança). Peça para a pessoa
+    O convite é amarrado a uma **conta existente**. A resposta é sempre a mesma,
+    tenha o e-mail conta ou não (anti-enumeração): *"Convite enviado. Se o e-mail
+    estiver cadastrado, a pessoa recebe o acesso."* Peça para a pessoa
     [criar a conta](01-criar-conta.md) antes, e confirme o e-mail exato.
 
 ## A tela — Usuários
 
-**Onde:** menu lateral → **Usuários** → botão **Convidar**.
+**Onde:** menu → **Controle de Acesso** → **Membros da empresa** (a tela abre com o
+título **Usuários**) → botão **Convidar**.
+
+!!! note "Aqui só se convida — perfil vem depois"
+    O convite tem um **único campo: o e-mail**. Não se escolhe perfil nem papel
+    aqui. O acesso (o que a pessoa enxerga) é dado no [Passo 5](05-perfil-acesso.md),
+    por perfil e por unidade — depois que ela aceitar.
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" role="img"
@@ -37,7 +44,7 @@ No exemplo: o **Senna** convida **Barrichello** e **Massa**.
   <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Clientes</text>
   <rect x="8" y="120" width="176" height="28" rx="6" fill="currentColor" fill-opacity="0.08"/>
   <rect x="8" y="120" width="3" height="28" fill="currentColor" fill-opacity="0.55"/>
-  <text x="22" y="139" font-size="13" font-weight="700" fill="currentColor">Usuários</text>
+  <text x="22" y="139" font-size="13" font-weight="700" fill="currentColor">Membros da empresa</text>
   <text x="22" y="174" font-size="13" fill="currentColor" fill-opacity="0.7">Comissões</text>
   <text x="22" y="206" font-size="13" fill="currentColor" fill-opacity="0.7">Conta corrente</text>
   <text x="22" y="238" font-size="13" fill="currentColor" fill-opacity="0.7">Configurações</text>
@@ -93,7 +100,7 @@ Cada convidado passa a aparecer na lista de **Usuários** com o status
 | Estado na lista | Significado |
 | --- | --- |
 | **convidado** | Convite enviado, aguardando a pessoa aceitar |
-| **ativo** | A pessoa [aceitou](02-aceitar-convite.md) — já pode entrar num time e receber perfil |
+| **ativo** | A pessoa [aceitou](04-aceitar-convite.md) — já pode entrar num time e receber perfil |
 
 !!! danger "O erro nº 1 — e-mail com typo"
     Convidar um e-mail **sem conta não retorna erro** na tela (é anti-enumeração).
@@ -105,4 +112,4 @@ Cada convidado passa a aparecer na lista de **Usuários** com o status
     Barrichello e Massa aparecem em **Usuários**. Antes de montar o time, confirme
     que eles **aceitaram** (status **ativo**) — os próximos passos dependem disso.
 
-→ Próximo: [5 · Atribuir perfil de acesso](05-perfil-acesso.md)
+→ Próximo: [4 · Aceitar o convite](04-aceitar-convite.md)
