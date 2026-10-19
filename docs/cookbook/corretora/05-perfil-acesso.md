@@ -13,8 +13,8 @@ pessoa no "grupo de permissão" certo.
 ## Pré-requisito
 
 A pessoa precisa ter **aceitado o convite** (status **ativo** em
-[Usuários](04-convidar.md)). Quem está só **convidado** ainda não pode receber
-perfil.
+[Membros da empresa](03-convidar.md)). Quem está só **convidado** ainda não pode
+receber perfil.
 
 ## Os perfis disponíveis
 
@@ -31,12 +31,13 @@ Os perfis vêm do servidor (RBAC) e têm nomes em português:
 
 ## A tela — Usuários do perfil
 
-**Onde:** menu → **Perfis** → abrir um perfil (ex.: **Vendedor**) → **Usuários do
-perfil**.
+**Onde:** menu → **Controle de Acesso** → **Perfis da empresa** (a tela abre com o
+título **Perfis de acesso**) → abrir um perfil (ex.: **Vendedor**) → aba
+**Usuários** (*Usuários do perfil*).
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img"
-     aria-label="Tela Usuários do perfil Vendedor com listas Com acesso e Sem acesso e botão Conceder"
+     aria-label="Tela Usuários do perfil Vendedor com listas Com acesso e Sem acesso e botão Dar acesso"
      style="width:100%;height:auto;color:var(--md-default-fg-color);font-family:var(--md-text-font-family,system-ui,sans-serif)">
   <rect x="4" y="4" width="752" height="412" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.35"/>
   <line x1="4" y1="38" x2="756" y2="38" stroke="currentColor" stroke-opacity="0.2"/>
@@ -48,10 +49,10 @@ perfil**.
 
   <line x1="190" y1="38" x2="190" y2="416" stroke="currentColor" stroke-opacity="0.15"/>
   <text x="22" y="74"  font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
-  <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Usuários</text>
+  <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Membros da empresa</text>
   <rect x="8" y="120" width="176" height="28" rx="6" fill="currentColor" fill-opacity="0.08"/>
   <rect x="8" y="120" width="3" height="28" fill="currentColor" fill-opacity="0.55"/>
-  <text x="22" y="139" font-size="13" font-weight="700" fill="currentColor">Perfis</text>
+  <text x="22" y="139" font-size="13" font-weight="700" fill="currentColor">Perfis da empresa</text>
   <text x="22" y="174" font-size="13" fill="currentColor" fill-opacity="0.7">Comissões</text>
   <text x="22" y="206" font-size="13" fill="currentColor" fill-opacity="0.7">Configurações</text>
 
@@ -74,7 +75,7 @@ perfil**.
   <!-- com acesso -->
   <text x="210" y="264" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.6">COM ACESSO (0)</text>
   <rect x="210" y="272" width="530" height="36" rx="7" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-dasharray="4 4"/>
-  <text x="228" y="294" font-size="12" fill="currentColor" fill-opacity="0.45">Ninguém ainda — conceda a alguém abaixo.</text>
+  <text x="228" y="294" font-size="12" fill="currentColor" fill-opacity="0.45">Ninguém ainda — dê acesso a alguém abaixo.</text>
 
   <!-- sem acesso -->
   <text x="210" y="342" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.6">SEM ACESSO (1)</text>
@@ -83,7 +84,7 @@ perfil**.
   <text x="232" y="374" font-size="11" font-weight="700" fill="currentColor" fill-opacity="0.7" text-anchor="middle">M</text>
   <text x="252" y="374" font-size="12.5" fill="currentColor">Massa · massa@f1.test</text>
   <rect x="636" y="357" width="90" height="26" rx="6" fill="currentColor" fill-opacity="0.14"/>
-  <text x="681" y="374" font-size="11.5" font-weight="600" fill="currentColor" text-anchor="middle">Conceder</text>
+  <text x="681" y="374" font-size="11.5" font-weight="600" fill="currentColor" text-anchor="middle">Dar acesso</text>
 
   <g font-size="12" font-weight="700" text-anchor="middle">
     <circle cx="210" cy="146" r="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
@@ -103,10 +104,10 @@ perfil**.
 | --- | --- | --- | --- |
 | **1** | Seletor **Unidade** | Escolher a unidade | O acesso é **por unidade** — a pessoa pode ter o perfil numa filial e não em outra |
 | **2** | Lista **Sem acesso** | Localizar a pessoa | Use a **Busca** (nome ou e-mail) se a lista for grande |
-| **3** | Botão **Conceder** | Conceder o perfil | A pessoa passa para **Com acesso** na hora |
+| **3** | Botão **Dar acesso** | Dar o perfil à pessoa | Ela passa para **Com acesso** na hora |
 
-Para **tirar** o acesso, use **Remover** na lista "Com acesso" (some da lista de
-quem enxerga aquele perfil naquela unidade).
+Para **tirar** o acesso, use **Remover acesso** na lista "Com acesso" (some da
+lista de quem enxerga aquele perfil naquela unidade).
 
 !!! info "Por que o seletor de unidade importa"
     O vínculo mora em `user_profile` e é **por unidade**, não por empresa. Sem
