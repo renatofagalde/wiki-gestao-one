@@ -28,7 +28,7 @@ não aparece na lista de membros, a pessoa ainda não [aceitou o convite](04-ace
   <text x="94" y="25" font-size="11" fill="currentColor" fill-opacity="0.55">webd.gestao.one</text>
 
   <line x1="190" y1="38" x2="190" y2="376" stroke="currentColor" stroke-opacity="0.15"/>
-  <text x="22" y="70" font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
+  <text x="22" y="70" font-size="13" fill="currentColor" fill-opacity="0.7">Visão geral</text>
   <text x="22" y="98" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
   <rect x="8" y="108" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="108" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
   <text x="32" y="126" font-size="12.5" font-weight="700" fill="currentColor">Times</text>
