@@ -32,10 +32,10 @@ não aparece na lista de membros, a pessoa ainda não [aceitou o convite](04-ace
   <text x="22" y="98" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
   <rect x="8" y="108" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="108" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
   <text x="32" y="126" font-size="12.5" font-weight="700" fill="currentColor">Times</text>
-  <text x="32" y="152" font-size="12.5" fill="currentColor" fill-opacity="0.7">Planos</text>
+  <text x="32" y="152" font-size="12.5" fill="currentColor" fill-opacity="0.7">Planos de comissão</text>
   <text x="32" y="178" font-size="12.5" fill="currentColor" fill-opacity="0.7">Leads</text>
   <text x="32" y="204" font-size="12.5" fill="currentColor" fill-opacity="0.7">Propostas</text>
-  <text x="32" y="230" font-size="12.5" fill="currentColor" fill-opacity="0.7">Recebíveis</text>
+  <text x="32" y="230" font-size="12.5" fill="currentColor" fill-opacity="0.7">Meus recebiveis</text>
 
   <text x="210" y="66" font-size="17" font-weight="700" fill="currentColor">Times</text>
   <rect x="628" y="52" width="112" height="30" rx="7" fill="currentColor" fill-opacity="0.14"/>
