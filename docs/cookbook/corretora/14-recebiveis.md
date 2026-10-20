@@ -6,7 +6,13 @@ dele**. Recebíveis é a tela que mostra o **rateio** — a confirmação não m
 
 ## 14.1 · A visão do dono — por beneficiário
 
-**Onde:** menu → **Comissões** → **Recebiveis da corretora**.
+**Onde:** menu → **Comissões** → **Meus recebiveis**.
+
+!!! note "Um item de menu só, duas visões"
+    No menu existe **apenas "Meus recebiveis"** (o front deduplica as duas rotas
+    de recebíveis numa só). O **dono/gestão** vê, nesta mesma tela, **também o
+    total da corretora por beneficiário** — porque tem permissão; o **vendedor**
+    vê só o dele.
 
 Valores do exemplo, depois de confirmar as **parcelas 1 e 2** (líquido de R$ 90,00
 cada):
@@ -23,7 +29,7 @@ cada):
   <text x="22" y="66" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
   <text x="32" y="92" font-size="12.5" fill="currentColor" fill-opacity="0.7">Comissões pendentes</text>
   <rect x="8" y="102" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="102" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
-  <text x="32" y="120" font-size="11.5" font-weight="700" fill="currentColor">Recebiveis da corretora</text>
+  <text x="32" y="120" font-size="11.5" font-weight="700" fill="currentColor">Meus recebiveis</text>
 
   <text x="210" y="66" font-size="17" font-weight="700" fill="currentColor">Recebíveis</text>
   <text x="210" y="92" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.55">CORRETORA — POR BENEFICIÁRIO</text>
