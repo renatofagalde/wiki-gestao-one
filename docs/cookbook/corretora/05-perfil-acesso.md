@@ -48,7 +48,7 @@ título **Perfis de acesso**) → abrir um perfil (ex.: **Vendedor**) → aba
   <text x="94" y="25" font-size="11" fill="currentColor" fill-opacity="0.55">webd.gestao.one</text>
 
   <line x1="190" y1="38" x2="190" y2="416" stroke="currentColor" stroke-opacity="0.15"/>
-  <text x="22" y="74"  font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
+  <text x="22" y="74"  font-size="13" fill="currentColor" fill-opacity="0.7">Visão geral</text>
   <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Membros da empresa</text>
   <rect x="8" y="120" width="176" height="28" rx="6" fill="currentColor" fill-opacity="0.08"/>
   <rect x="8" y="120" width="3" height="28" fill="currentColor" fill-opacity="0.55"/>
