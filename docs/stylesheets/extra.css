@@ -1,30 +1,21 @@
 /* ==========================================================================
-   Cookbook — ilustrações (wireframes SVG) maiores e mais legíveis.
+   Cookbook — ilustrações (wireframes SVG) ocupando a LARGURA DA COLUNA.
 
-   Os wireframes usam width:100% e já preenchem a coluna de texto. Para deixá-los
-   MAIORES, em telas largas a figura "estoura" a coluna de conteúdo (breakout),
-   mantendo-se centralizada. No mobile fica na largura normal (sem scroll
-   horizontal).
-
-   TUNING: aumente/diminua o par width / margens negativas abaixo. Para ~2x,
-   algo como width:170% com margin -35%. Se encostar no índice (TOC) à direita,
-   reduza o valor.
+   O tema Material estiliza `.md-typeset figure { width: fit-content }`, o que
+   encolhe a figura ao tamanho intrínseco do SVG — por isso os desenhos saíam
+   pequenos e centralizados, bem menores que o texto. Aqui forçamos a figura a
+   ocupar a coluna de conteúdo e o SVG a preenchê-la (mesma largura do texto e
+   das caixas de aviso).
    ========================================================================== */
 
 .md-typeset figure {
-  text-align: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .md-typeset figure svg {
+  display: block;
   width: 100%;
   height: auto;
-}
-
-@media screen and (min-width: 76.25em) {
-  .md-typeset figure {
-    width: 150%;
-    max-width: 150%;
-    margin-left: -25%;
-    margin-right: -25%;
-  }
+  margin: 0 auto;
 }
