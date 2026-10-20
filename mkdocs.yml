@@ -2,6 +2,9 @@ site_name: gestao.one — Guia de uso
 site_description: Guias de uso do gestao.one para dono de corretora, gerente, financeiro e vendedor.
 site_url: https://renatofagalde.github.io/wiki-gestao-one/
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   language: pt-BR
