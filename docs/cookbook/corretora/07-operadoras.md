@@ -25,7 +25,7 @@ para um produto — e é o que mantém o ranking de vendas honesto.
   <text x="22" y="66" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
   <rect x="8" y="76" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="76" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
   <text x="32" y="94" font-size="12.5" font-weight="700" fill="currentColor">Operadoras</text>
-  <text x="32" y="120" font-size="12.5" fill="currentColor" fill-opacity="0.7">Planos</text>
+  <text x="32" y="120" font-size="12.5" fill="currentColor" fill-opacity="0.7">Planos de comissão</text>
   <text x="32" y="146" font-size="12.5" fill="currentColor" fill-opacity="0.7">Times</text>
 
   <text x="210" y="66" font-size="17" font-weight="700" fill="currentColor">Operadoras</text>

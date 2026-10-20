@@ -41,7 +41,7 @@ título **Usuários**) → botão **Convidar**.
 
   <line x1="190" y1="38" x2="190" y2="456" stroke="currentColor" stroke-opacity="0.15"/>
   <text x="22" y="74"  font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
-  <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Clientes</text>
+  <text x="22" y="106" font-size="13" fill="currentColor" fill-opacity="0.7">Pessoas</text>
   <rect x="8" y="120" width="176" height="28" rx="6" fill="currentColor" fill-opacity="0.08"/>
   <rect x="8" y="120" width="3" height="28" fill="currentColor" fill-opacity="0.55"/>
   <text x="22" y="139" font-size="13" font-weight="700" fill="currentColor">Membros da empresa</text>
