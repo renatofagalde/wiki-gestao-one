@@ -16,6 +16,14 @@ Três pessoas, uma corretora: **Senna Racing Seguros**.
 | **Barrichello** | gerente comercial | `gerente` | `manager` (gerente) | `barrichello@f1.test` |
 | **Massa** | vendedor | `vendedor` | `seller` (vendedor) | `massa@f1.test` |
 
+!!! info "Nomes e e-mails são só exemplo"
+    Senna, Barrichello e Massa — e os e-mails `@f1.test` — são **fictícios**, só
+    para dar um fio condutor. Você, leitor, pode seguir este material com **os seus
+    próprios e-mails** (os reais da sua equipe ou qualquer endereço de teste):
+    basta usar o seu no lugar onde o roteiro mostra o do exemplo. O que importa é a
+    **ordem dos passos** e a dupla **perfil de acesso × papel de time** — não os
+    nomes em si.
+
 !!! warning "Os dois papéis não se misturam"
     - **Perfil de acesso** (`admin`, `gerente`, `vendedor`) = **o que a pessoa vê
       e faz** nas telas.
