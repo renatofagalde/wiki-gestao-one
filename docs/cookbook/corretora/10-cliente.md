@@ -16,7 +16,7 @@ virar um lead. Esta tela é o cadastro de **Pessoas** (clientes) da corretora.
   <circle cx="24" cy="21" r="4" fill="currentColor" fill-opacity="0.4"/><circle cx="38" cy="21" r="4" fill="currentColor" fill-opacity="0.4"/><circle cx="52" cy="21" r="4" fill="currentColor" fill-opacity="0.4"/>
   <rect x="80" y="11" width="280" height="20" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.25"/><text x="94" y="25" font-size="11" fill="currentColor" fill-opacity="0.55">webd.gestao.one</text>
   <line x1="190" y1="38" x2="190" y2="286" stroke="currentColor" stroke-opacity="0.15"/>
-  <text x="22" y="66" font-size="13" fill="currentColor" fill-opacity="0.7">Início</text>
+  <text x="22" y="66" font-size="13" fill="currentColor" fill-opacity="0.7">Visão geral</text>
   <rect x="8" y="78" width="176" height="26" rx="6" fill="currentColor" fill-opacity="0.08"/><rect x="8" y="78" width="3" height="26" fill="currentColor" fill-opacity="0.55"/>
   <text x="22" y="96" font-size="12.5" font-weight="700" fill="currentColor">Pessoas</text>
   <text x="22" y="122" font-size="10.5" font-weight="700" fill="currentColor" fill-opacity="0.45">COMISSÕES</text>
