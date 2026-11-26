@@ -71,5 +71,10 @@ nav:
           - 12 · Proposta e emissão da apólice: cookbook/corretora/12-proposta-apolice.md
           - 13 · Confirmar as comissões: cookbook/corretora/13-confirmar-comissoes.md
           - 14 · Recebíveis — o dinheiro: cookbook/corretora/14-recebiveis.md
+      - SS2 (Agente):
+          - Visão geral: cookbook/ss2/index.md
+          - Windows: cookbook/ss2/windows.md
+          - macOS: cookbook/ss2/macos.md
+          - Linux: cookbook/ss2/linux.md
       - WebFlow: cookbook/webflow.md
       - TISS: cookbook/tiss.md
